@@ -1,0 +1,15 @@
+<%- include("../partials/header.ejs") %> 
+  <h1>Students</h1>
+  <% if(error) { %>
+    <h2><%= error %></h2>
+  <% } %>
+  <ul>
+    <% students.forEach(function(student) { %>
+      <li>
+        <%= student.name %>
+        - 
+        <%= student.done ? "done" : "not done" %>
+      </li>
+    <% }) %>
+  </ul>
+  <%- include("../partials/footer.ejs") %> 
